@@ -6,9 +6,9 @@
         <link rel="stylesheet" href="/css.css">
     </header>
     <body>
-        <h1>My Smartphone shop</h1>
+        <h1>My Smartphone Shop</h1>
 
-        <table>
+        <table id="myTable">
             <tr>
                 <th>Product</th>
                 <th>Price</th>
@@ -61,26 +61,17 @@
 
         <br>
         <button onclick="changeH1Text()">Change h1 text</button><br>
-        <button class="btn2" type="button">Change background color</button><br>
-        <button class="btn3" type="button">Change the footer address with a fake one</button><br>
-        <button class="btn4" type="button">Add a CSS class to every Amazon link</button><br>
-        <button class="btn5" type="button">Toggle a CSS class for all the images in the table</button><br>
-        <button class="btn6" type="button">Color the price of each product in a different one every time it's invoked</button><br>
+        <button onclick="changeBackgroundColor()">Change background color</button><br>
+        <button onclick="changeFooterAddress()">Change the footer address with a fake one</button><br>
+        <button >Add a CSS class to every Amazon link</button><br>
+        <button >Toggle a CSS class for all the images in the table</button><br>
+        <button >Color the price of each product in a different one every time it's invoked</button><br>
 
-
-        <script lang="text/javascript">
-            let changeH1Text = function(){
-                let h1 = document.getElementsByTagName("h1");
-                //document.getElementById("yourH1_element_Id").innerHTML = "etst"
-                alert("hi");
-            }
-            
-        </script>
-        <!-- <script src="js.js"></script> -->
+        <script src="js.js"></script>
     </body>
 
     <footer>
-        <p><strong>Address: Ireland, Earth</strong></p>
+        <p id="address"><strong>Address: Ireland, Earth</strong></p>
         <p><strong>Crazy shop</strong></p>
     </footer>
 </html>
