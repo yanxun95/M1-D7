@@ -1,0 +1,18 @@
+body{
+    background-color: lightblue;
+    padding: 5px;
+}
+
+h1{
+    color: Black;
+}
+  
+table, th, td{
+    border: 1px solid black;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+  
