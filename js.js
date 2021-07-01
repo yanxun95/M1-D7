@@ -1,30 +1,39 @@
-
-// EX10.: Write a function to add a CSS class to every Amazon link
-
-// EX11: Write a function to toggle a CSS class for all the images in the table; that class should set the visibility of the image
-
-// EX12: Write a function to color the price of each product in a different one every time it's invoked
-let changeH1Text = function(){
+const changeH1Text = function(){
     document.getElementsByTagName("h1")[0].innerHTML = "Not So Smartphone Shop";
 }
 
-let changeBackgroundColor = function(){
+const changeBackgroundColor = function(){
     document.body.style.backgroundColor = "lightgreen";
 }
 
-let changeFooterAddress = function(){
+const changeFooterAddress = function(){
     document.getElementById("address").innerHTML = "<strong>Address: Mars</strong>";
 }
 
-let addClass = function(){
-    let table = document.getElementById('myTable');
-    let rowLength = table.rows.length;
-    for (i = 0; i < rowLength; i++){
+const addClass = function(){
+    for (let node of document.querySelectorAll("a")) {
+        node.classList.add("amazon");
+    }
+}
 
-        let oCells = oTable.rows.item(i).cells;
-        let cellLength = oCells.length;
-        for(let j = 0; j < cellLength; j++){
-            
-        }
-     }
+const imgInvi = function(){
+    for (let image of document.querySelectorAll("img")) {
+        image.classList.toggle("hidden"); // if the class is already set, remove it. otherwise, add it
+    }
+}
+
+const setRandomColor = function() {
+    const color = getRandomColor();
+
+    for (let price of document.querySelectorAll("tr > td:nth-child(2)")) {
+        price.style.color = color;
+    }
+}
+
+const getRandomColor = function() {
+    const red = Math.round(Math.random() * 255);
+    const green = Math.round(Math.random() * 255);
+    const blue = Math.round(Math.random() * 255);
+
+    return "rgb(" + red + ", " + green + ", " + blue + ")";
 }

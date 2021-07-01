@@ -19,3 +19,7 @@ img {
 .amazon{
     color: red;
 }
+
+.hidden {
+    visibility: hidden;
+}
